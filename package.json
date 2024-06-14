@@ -1,0 +1,24 @@
+{
+  "name": "webdevgithubprojecttemplate",
+  "version": "1.0.0",
+  "description": "GitHub Repository Template for Web Development Projects",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "gh-pages": "git subtree push --prefix dist origin gh-pages && git push"
+  },
+  "keywords": [],
+  "author": "Amal K",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "eslint": "^9.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "prettier": "^3.2.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
