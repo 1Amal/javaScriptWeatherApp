@@ -110,13 +110,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/displayController.js":
+/*!**********************************!*\
+  !*** ./src/displayController.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   displayController: () => (/* binding */ displayController)\n/* harmony export */ });\n// This module will receive user inputs and update the Display based on received API data\n\nclass displayController\n{\n    constructor()\n    {\n\n    }\n\n    receiveUserInput()\n    {\n        console.log(\"Display Controller Module called\")\n    }\n\n    updateDisplay()\n    {\n\n    }\n}\n\n//# sourceURL=webpack://webdevgithubprojecttemplate/./src/displayController.js?");
+
+/***/ }),
+
 /***/ "./src/mainJavaScript.js":
 /*!*******************************!*\
   !*** ./src/mainJavaScript.js ***!
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mainStyleSheet_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mainStyleSheet.css */ \"./src/mainStyleSheet.css\");\n//This is the main JavaScript file\n\n//ES Module Imports\n//Following will import the CSS file used to style the project\n\n\n\n//# sourceURL=webpack://webdevgithubprojecttemplate/./src/mainJavaScript.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mainStyleSheet_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mainStyleSheet.css */ \"./src/mainStyleSheet.css\");\n/* harmony import */ var _queryAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./queryAPI.js */ \"./src/queryAPI.js\");\n/* harmony import */ var _displayController_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./displayController.js */ \"./src/displayController.js\");\n//This is the main JavaScript file\n\n//ES Module Imports\n//Following will import the CSS file used to style the project\n\n\n\n\nconst newInstanceProcessWeatherAPI= new _queryAPI_js__WEBPACK_IMPORTED_MODULE_1__.processWeatherAPI;\nconst newInstanceDisplayController= new _displayController_js__WEBPACK_IMPORTED_MODULE_2__.displayController;\n\nnewInstanceProcessWeatherAPI.sendAPIQuery();\nnewInstanceDisplayController.receiveUserInput();\n\n//# sourceURL=webpack://webdevgithubprojecttemplate/./src/mainJavaScript.js?");
+
+/***/ }),
+
+/***/ "./src/queryAPI.js":
+/*!*************************!*\
+  !*** ./src/queryAPI.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   processWeatherAPI: () => (/* binding */ processWeatherAPI)\n/* harmony export */ });\n// This module will handle all WeatherAPI.com API authentication, query and processing of the received data before passing onto the displayController module\n\nclass processWeatherAPI\n{\n    constructor()\n    {\n\n    }\n\n    sendAPIQuery()\n    {\n        console.log(\"Send a API query Module Loaded\");\n    }\n\n    authenticateAPI()\n    {\n\n    }\n\n\n    forwardDataToDisplayController()\n    {\n\n    }\n}\n\n//# sourceURL=webpack://webdevgithubprojecttemplate/./src/queryAPI.js?");
 
 /***/ })
 
