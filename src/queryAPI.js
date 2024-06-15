@@ -1,5 +1,7 @@
 // This module will handle all WeatherAPI.com API authentication, query and processing of the received data before passing onto the displayController module
 
+import {newInstanceDisplayController} from "./mainJavaScript";
+
 export class processWeatherAPI {
   constructor() {
     this.apiKey = "5f5b890a42c24a71a1535406241206";
@@ -36,28 +38,49 @@ export class processWeatherAPI {
         uv: returnedAPIQuery.current.uv,
         weatherAlerts: returnedAPIQuery.alerts.alert,
         weatherLastUpdated: returnedAPIQuery.current.last_updated,
+        // hourlyWeather:{returnedAPIQuery.forecast.forecastday[0].hour[0].time
+
+        // }
       },
       weatherTommorrow: {
-        currentDate: returnedAPIQuery.forecast.forecastday[0].date,
-        temperatureCLow: returnedAPIQuery.forecast.forecastday[0].day.mintemp_c,
+        currentDate: returnedAPIQuery.forecast.forecastday[1].date,
+        temperatureCLow: returnedAPIQuery.forecast.forecastday[1].day.mintemp_c,
         temperatureCHigh:
-          returnedAPIQuery.forecast.forecastday[0].day.maxtemp_c,
+          returnedAPIQuery.forecast.forecastday[1].day.maxtemp_c,
         temperatureCAverage:
-          returnedAPIQuery.forecast.forecastday[0].day.avgtemp_c,
+          returnedAPIQuery.forecast.forecastday[1].day.avgtemp_c,
         humidityAverage:
-          returnedAPIQuery.forecast.forecastday[0].day.avghumidity,
+          returnedAPIQuery.forecast.forecastday[1].day.avghumidity,
         dailyChanceOfRain:
-          returnedAPIQuery.forecast.forecastday[0].day.daily_chance_of_rain,
-
+          returnedAPIQuery.forecast.forecastday[1].day.daily_chance_of_rain,
         windSpeedMaximum:
-          returnedAPIQuery.forecast.forecastday[0].day.maxwind_kph,
-        uv: returnedAPIQuery.forecast.forecastday[0].day.uv,
-        condition: returnedAPIQuery.forecast.forecastday[0].day.condition.text,
-        sunrise: returnedAPIQuery.forecast.forecastday[0].astro.sunrise,
-        sunset: returnedAPIQuery.forecast.forecastday[0].astro.sunset,
+          returnedAPIQuery.forecast.forecastday[1].day.maxwind_kph,
+        uv: returnedAPIQuery.forecast.forecastday[1].day.uv,
+        condition: returnedAPIQuery.forecast.forecastday[1].day.condition.text,
+        sunrise: returnedAPIQuery.forecast.forecastday[1].astro.sunrise,
+        sunset: returnedAPIQuery.forecast.forecastday[1].astro.sunset
       },
-      weatherDayAfterTommorrow: {},
+      weatherDayAfterTommorrow: {
+        currentDate: returnedAPIQuery.forecast.forecastday[2].date,
+        temperatureCLow: returnedAPIQuery.forecast.forecastday[2].day.mintemp_c,
+        temperatureCHigh:
+          returnedAPIQuery.forecast.forecastday[2].day.maxtemp_c,
+        temperatureCAverage:
+          returnedAPIQuery.forecast.forecastday[2].day.avgtemp_c,
+        humidityAverage:
+          returnedAPIQuery.forecast.forecastday[2].day.avghumidity,
+        dailyChanceOfRain:
+          returnedAPIQuery.forecast.forecastday[2].day.daily_chance_of_rain,
+        windSpeedMaximum:
+          returnedAPIQuery.forecast.forecastday[2].day.maxwind_kph,
+        uv: returnedAPIQuery.forecast.forecastday[2].day.uv,
+        condition: returnedAPIQuery.forecast.forecastday[2].day.condition.text,
+        sunrise: returnedAPIQuery.forecast.forecastday[2].astro.sunrise,
+        sunset: returnedAPIQuery.forecast.forecastday[2].astro.sunset
+      },
     };
-    console.log(displayData);
+    // console.log(displayData);
+
+    return newInstanceDisplayController.updateDisplay(displayData);
   }
 }

@@ -3,11 +3,13 @@
 //ES Module Imports
 //Following will import the CSS file used to style the project
 import "./mainStyleSheet.css";
-import {processWeatherAPI} from "./queryAPI.js";
-import { displayController } from "./displayController.js";
+import { processWeatherAPI } from "./queryAPI";
+import { displayController } from "./displayController";
 
-const newInstanceProcessWeatherAPI= new processWeatherAPI;
-const newInstanceDisplayController= new displayController;
+
+
+export const newInstanceProcessWeatherAPI = new processWeatherAPI();
+export const newInstanceDisplayController = new displayController();
 
 newInstanceProcessWeatherAPI.sendAPIQuery("Melbourne");
 newInstanceDisplayController.receiveUserInput();

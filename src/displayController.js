@@ -7,13 +7,14 @@ export class displayController
 
     }
 
+
     receiveUserInput()
     {
         console.log("Display Controller Module called")
     }
 
-    updateDisplay()
+    updateDisplay(weatherData)
     {
-
+        console.log(weatherData);
     }
 }
