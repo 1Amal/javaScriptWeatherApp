@@ -9,5 +9,5 @@ import { displayController } from "./displayController.js";
 const newInstanceProcessWeatherAPI= new processWeatherAPI;
 const newInstanceDisplayController= new displayController;
 
-newInstanceProcessWeatherAPI.sendAPIQuery();
+newInstanceProcessWeatherAPI.sendAPIQuery("Melbourne");
 newInstanceDisplayController.receiveUserInput();
