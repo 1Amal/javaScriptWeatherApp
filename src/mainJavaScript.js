@@ -6,10 +6,15 @@ import "./mainStyleSheet.css";
 import { processWeatherAPI } from "./queryAPI";
 import { displayController } from "./displayController";
 
-
+const weatherSearchButton = document.querySelector("#weatherSearchButton");
+const weatherSearchField = document.querySelector("#locationInput");
 
 export const newInstanceProcessWeatherAPI = new processWeatherAPI();
 export const newInstanceDisplayController = new displayController();
 
-newInstanceProcessWeatherAPI.sendAPIQuery("Melbourne");
 newInstanceDisplayController.receiveUserInput();
+
+weatherSearchButton.addEventListener("click", () => {
+  newInstanceProcessWeatherAPI.sendAPIQuery(weatherSearchField.value);
+  console.log(weatherSearchField.value);
+});

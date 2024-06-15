@@ -16,5 +16,7 @@ export class displayController
     updateDisplay(weatherData)
     {
         console.log(weatherData);
+        const todayTemp=document.querySelector(".todayTemp");
+        todayTemp.innerText=weatherData.weatherNow.temperatureC + " C";
     }
 }
