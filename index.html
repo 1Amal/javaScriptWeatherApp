@@ -6,13 +6,50 @@
     <title>JavaScript WeatherApp</title>
   <script defer src="mainJavaScript.js"></script></head>
   <body>
-    <div class="appContainer"></div>
+    <div class="appContainer">
+      <div class="locationInput">
+        <form action="" method="get" id="bookSubmitForm">
+          <div>
+            <label for="locationInput">Please Enter Location</label>
+            <input id="locationInput" type="text" name="locationInput" value="Melbourne, AU"required/>
+          </div>
+          <div>
+            <button type="button" id="weatherSearchButton">
+              Search for Location
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="displayWeatherData">
+        <div class="weatherToday">
+            <h2>Weather Today</h2>
+            <p class="todayTemp"></p>
+        </div>
+
+        <div class="weatherTommorrow">
+
+        </div>
+
+        <div class="weatherDayAfterTommorrow">
+
+        </div>
+      </div>
+    </div>
 
     <div class="introduction">
       <h1>JavaScript WeatherApp</h1>
-        <a href="https://1amal.github.io/javaScriptWeatherApp/">Live GitHub Pages hosted App</a> <br>
-        <a href="https://github.com/1Amal/javaScriptWeatherApp">Source Code on GitHub</a> <br>
-        <a href="https://1amal.github.io/">Amal's Software Engineering Portfolio</a>
+      <a href="https://1amal.github.io/javaScriptWeatherApp/"
+        >Live GitHub Pages hosted App</a
+      >
+      <br />
+      <a href="https://github.com/1Amal/javaScriptWeatherApp"
+        >Source Code on GitHub</a
+      >
+      <br />
+      <a href="https://1amal.github.io/"
+        >Amal's Software Engineering Portfolio</a
+      >
       <p>
         This page serves as the entry point for our user-friendly weather app.
         Built with JavaScript, HTML, CSS, Webpack, and a weather API, this app
@@ -37,8 +74,6 @@
           appealing and responsive user interface that adapts seamlessly to
           different screen sizes.
         </li>
-
-
       </ul>
 
       <h2>Getting Started:</h2>
