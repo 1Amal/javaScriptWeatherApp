@@ -6,8 +6,8 @@
     <title>JavaScript WeatherApp</title>
   <script defer src="mainJavaScript.js"></script></head>
   <body>
-    <div class="appContainer">
-      <div class="locationInput">
+    <div class="appContainerDIV">
+      <div class="locationInputDIV">
         <form action="" method="get" id="bookSubmitForm">
           <div>
             <label for="locationInput">Please Enter Location</label>
@@ -19,7 +19,7 @@
               required
             />
           </div>
-          <div>
+          <div class="weatherSearchButtonDIV">
             <button type="button" id="weatherSearchButton">
               Search for Location
             </button>
@@ -28,8 +28,8 @@
         </form>
       </div>
 
-      <div class="displayWeatherData">
-        <div class="locationDetails">
+      <div class="displayWeatherDataDIV">
+        <div class="locationDetailsDIV">
           <h1>
             Weather Today in <span class="displayLocation"></span>
             <span>=></span>
@@ -38,7 +38,7 @@
             <span class="displayCountry"></span>
           </h1>
         </div>
-        <div class="weatherToday">
+        <div class="weatherTodayDIV">
           <h2>Now / Today: <span class="displayDate1"></span></h2>
 
           <h2>Temperature: <span class="DisplayTempDay1"></span></h2>
@@ -64,7 +64,7 @@
           </h3>
         </div>
 
-        <div class="weatherTommorrow">
+        <div class="weatherTommorrowDIV">
           <h2>Tomorrow: <span class="displayDate2"></span></h2>
 
           <h2>
@@ -91,7 +91,7 @@
           <h3>Sunset: <span class="displaySunsetDay2"></span></h3>
         </div>
 
-        <div class="weatherDayAfterTommorrow">
+        <div class="weatherDayAfterTommorrowDIV">
           <h2>Day After Tomorrow: <span class="displayDate3"></span></h2>
           <h2>
             Temperature Average: <span class="DisplayTempAverageDay3"></span>
