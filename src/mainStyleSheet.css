@@ -4,6 +4,15 @@
   font-size: 10px;
 }
 
+body {
+  background-image: url("./images/pexels-jplenio-1632790.jpg");
+  background-color: #cccccc;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* position: fixed; */
+}
+
 h1 {
   color: #0d023e;
   font-size: 3rem;
@@ -15,7 +24,7 @@ h2 {
 }
 
 h3 {
-  color: #902900;
+  color: #000000;
   font-size: 1.5rem;
 }
 p {
@@ -24,39 +33,47 @@ p {
 
 span {
   font-size: 2rem;
+  color: #ff7105;
 }
 
 .appContainerDIV {
   display: grid;
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 1fr 1fr 10fr;
   grid-template-columns: 1fr 1fr 1fr;
+  opacity: 0.8;
 }
 
 .locationInputDIV {
-  background-color: #7b6ac5;
-  grid-row: 1/2;
+  background-color: #efd5d5;
+  grid-row: 2/3;
   grid-column: 1/4;
+  opacity: 0.8;
 }
 
 .locationDetailsDIV {
-  background-color: #532ff4;
+  background-color: #6049c7;
 }
 .displayWeatherDataDIV {
   /* display: flex;
   flex-direction: row; */
   /* margin: 0; */
   background-color: #f6f6f6;
-  grid-row: 2/3;
+  grid-row: 3/4;
   grid-column: 1/4;
 }
 .weatherTodayDIV {
-  background-color: #009041;
+  background-color: #c1d6ca;
 }
 
 .weatherTommorrowDIV {
-  background-color: #009041;
+  background-color: #c1d6ca;
 }
 
 .weatherDayAfterTommorrowDIV {
-  background-color: #009041;
+  background-color: #c1d6ca;
+}
+
+.introduction {
+  background-color: #c1d6ca;
+  opacity: 0.7;
 }
