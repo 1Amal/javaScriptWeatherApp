@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("./images/pexels-jplenio-1632790.jpg");
+  background-image: url("./images/pexels-davidboca-2261500.jpg");
   background-color: #cccccc;
   background-position: top;
   background-repeat: no-repeat;
@@ -33,44 +33,67 @@ p {
 
 span {
   font-size: 2rem;
-  color: #ff7105;
+  color: #472e1b;
 }
 
 .appContainerDIV {
   display: grid;
-  grid-template-rows: 1fr 1fr 10fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 4fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   opacity: 0.8;
 }
 
 .locationInputDIV {
-  background-color: #efd5d5;
-  grid-row: 2/3;
-  grid-column: 1/4;
+  background-color: #ee1919;
+  grid-row: 1/2;
+  grid-column: 3/4;
   opacity: 0.8;
+  padding: 10px;
+  text-align: center;
+}
+
+.displayWeatherDataDIV {
+  background-color: #f6f6f6;
+  grid-row: 2/4;
+  grid-column: 2/5;
 }
 
 .locationDetailsDIV {
-  background-color: #6049c7;
+  background-color: #5d3cf3;
 }
-.displayWeatherDataDIV {
-  /* display: flex;
-  flex-direction: row; */
-  /* margin: 0; */
-  background-color: #f6f6f6;
-  grid-row: 3/4;
-  grid-column: 1/4;
+
+.threeDayForecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
 }
 .weatherTodayDIV {
-  background-color: #c1d6ca;
+  background-color: #8a8dba;
+  text-align: center;
+  border: #060300;
+  border-width: 5px;
+  border-style: solid;
+  flex-grow: 1;
 }
 
 .weatherTommorrowDIV {
-  background-color: #c1d6ca;
+  background-color: #8a8dba;
+  text-align: center;
+  border: #060300;
+  border-width: 5px;
+  border-style: solid;
+  flex-grow: 1;
 }
 
 .weatherDayAfterTommorrowDIV {
-  background-color: #c1d6ca;
+  background-color: #8a8dba;
+  text-align: center;
+  border: #060300;
+  border-width: 5px;
+  border-style: solid;
+  flex-grow: 1;
 }
 
 .introduction {

@@ -8,17 +8,27 @@ export class processWeatherAPI {
   }
 
   async sendAPIQuery(location) {
-    console.log("Send a API query Module Loaded");
+
+    try{
+        console.log("Send a API query Module Loaded");
     const sendQueryURL = `https://api.weatherapi.com/v1/forecast.json?key=${this.apiKey}&q=${location}&days=3&aqi=yes&alerts=yes`;
 
     let fetchWeather = await fetch(sendQueryURL, { mode: "cors" });
     const weatherDataJSON = await fetchWeather.json();
 
     return this.forwardDataToDisplayController(weatherDataJSON);
+    }
+
+    catch(error){
+        // console.log(error);
+        return newInstanceDisplayController.apiStatus("Error Occurred with the location entered, Please try again, Error Code: " + error);
+    }
+
+
   }
 
   forwardDataToDisplayController(returnedAPIQuery) {
-    console.log(returnedAPIQuery);
+    // console.log(returnedAPIQuery);
     const displayData = {
       locationdDetails: {
         location: returnedAPIQuery.location.name,
@@ -80,6 +90,7 @@ export class processWeatherAPI {
       },
     };
     // console.log(displayData);
+    newInstanceDisplayController.apiStatus("WeatherAPI returned Valid Response");
 
     return newInstanceDisplayController.updateDisplay(displayData);
   }
