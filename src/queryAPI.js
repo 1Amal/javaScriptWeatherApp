@@ -84,7 +84,7 @@ export class processWeatherAPI {
       },
     };
     newInstanceDisplayController.apiStatus(
-      "WeatherAPI returned Valid Response"
+      "WeatherAPI returned Valid a Response"
     );
 
     return newInstanceDisplayController.updateDisplay(displayData);
