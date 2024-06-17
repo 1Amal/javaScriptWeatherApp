@@ -10,7 +10,7 @@
       <div class="locationInputDIV">
         <form action="" method="get" id="bookSubmitForm">
           <div>
-            <label for="locationInput">Please Enter Location</label>
+            <label for="locationInput">Please Enter Location: </label>
             <input
               id="locationInput"
               type="text"
@@ -38,87 +38,88 @@
           </h1>
         </div>
         <div class="threeDayForecast">
+          <div class="weatherTodayDIV">
+            <h2>Today's Weather => <span class="displayDate1"></span></h2>
 
-       
-        <div class="weatherTodayDIV">
-          <h2>Today's Weather: <span class="displayDate1"></span></h2>
+            <h2>Temperature: <span class="DisplayTempDay1"></span></h2>
+            <h3>
+              Temperature (Feels Like):
+              <span class="displayTempFeelsLikeDay1"></span>
+            </h3>
+            <h3>
+              Weather Condition:
+              <span class="displayWeatherConditionDay1"></span>
+            </h3>
+            <h3>Humidity: <span class="displayHumidityDay1"></span></h3>
+            <h3>Wind Speed: <span class="displayWindSpeedDay1"></span></h3>
+            <h3>Pressure: <span class="displayPressureDay1"></span></h3>
+            <h3>UV Index: <span class="displayUVDay1"></span></h3>
+            <h3>Sunrise: <span class="displaySunriseDay1"></span></h3>
+            <h3>Sunset: <span class="displaySunsetDay1"></span></h3>
+            <h3>Local Time is: <span class="displayLocalTime"></span></h3>
+            <h3>
+              Weather Last Updated On:
+              <span class="displayLastUpdateDay1"></span>
+            </h3>
+          </div>
 
-          <h2>Temperature: <span class="DisplayTempDay1"></span></h2>
-          <h3>
-            Temperature (Feels Like):
-            <span class="displayTempFeelsLikeDay1"></span>
-          </h3>
-          <h3>
-            Weather Condition: <span class="displayWeatherConditionDay1"></span>
-          </h3>
-          <h3>Humidity: <span class="displayHumidityDay1"></span></h3>
-          <h3>Wind Speed: <span class="displayWindSpeedDay1"></span></h3>
-          <h3>Pressure: <span class="displayPressureDay1"></span></h3>
-          <h3>UV Index: <span class="displayUVDay1"></span></h3>
-          <h3>Sunrise: <span class="displaySunriseDay1"></span></h3>
-          <h3>Sunset: <span class="displaySunsetDay1"></span></h3>
-          <h3>Local Time is: <span class="displayLocalTime"></span></h3>
-          <h3>
-            Weather Last Updated On: <span class="displayLastUpdateDay1"></span>
-          </h3>
-          <!-- <h3>
-            Weather Alerts: <span class="displayWeatherAlertsDay1"></span>
-          </h3> -->
+          <div class="weatherTommorrowDIV">
+            <h2>Tomorrow's Weather => <span class="displayDate2"></span></h2>
+
+            <h2>
+              Temperature Average: <span class="DisplayTempAverageDay2"></span>
+            </h2>
+            <h3>
+              Temperature (Low):
+              <span class="displayTempLowDay2"></span>
+            </h3>
+            <h3>
+              Temperature (High):and an icon
+              <span class="displayTempHighDay2"></span>
+            </h3>
+
+            <h3>
+              Weather Condition:
+              <span class="displayWeatherConditionDay2"></span>
+            </h3>
+            <h3>Humidity: <span class="displayHumidityDay2"></span></h3>
+            <h3>
+              Wind Speed (Maximum): <span class="displayWindSpeedDay2"></span>
+            </h3>
+            <h3>UV Index: <span class="displayUVDay2"></span></h3>
+            <h3>Sunrise: <span class="displaySunriseDay2"></span></h3>
+            <h3>Sunset: <span class="displaySunsetDay2"></span></h3>
+          </div>
+
+          <div class="weatherDayAfterTommorrowDIV">
+            <h2>
+              Day After Tomorrow's Weather => <span class="displayDate3"></span>
+            </h2>
+            <h2>
+              Temperature Average: <span class="DisplayTempAverageDay3"></span>
+            </h2>
+            <h3>
+              Temperature (Low):
+              <span class="displayTempLowDay3"></span>
+            </h3>
+            <h3>
+              Temperature (High):
+              <span class="displayTempHighDay3"></span>
+            </h3>
+
+            <h3>
+              Weather Condition:
+              <span class="displayWeatherConditionDay3"></span>
+            </h3>
+            <h3>Humidity: <span class="displayHumidityDay3"></span></h3>
+            <h3>
+              Wind Speed (Maximum): <span class="displayWindSpeedDay3"></span>
+            </h3>
+            <h3>UV Index: <span class="displayUVDay3"></span></h3>
+            <h3>Sunrise: <span class="displaySunriseDay3"></span></h3>
+            <h3>Sunset: <span class="displaySunsetDay3"></span></h3>
+          </div>
         </div>
-
-        <div class="weatherTommorrowDIV">
-          <h2>Tomorrow's Weather <span class="displayDate2"></span></h2>
-
-          <h2>
-            Temperature Average: <span class="DisplayTempAverageDay2"></span>
-          </h2>
-          <h3>
-            Temperature (Low):
-            <span class="displayTempLowDay2"></span>
-          </h3>
-          <h3>
-            Temperature (High):
-            <span class="displayTempHighDay2"></span>
-          </h3>
-
-          <h3>
-            Weather Condition: <span class="displayWeatherConditionDay2"></span>
-          </h3>
-          <h3>Humidity: <span class="displayHumidityDay2"></span></h3>
-          <h3>
-            Wind Speed (Maximum): <span class="displayWindSpeedDay2"></span>
-          </h3>
-          <h3>UV Index: <span class="displayUVDay2"></span></h3>
-          <h3>Sunrise: <span class="displaySunriseDay2"></span></h3>
-          <h3>Sunset: <span class="displaySunsetDay2"></span></h3>
-        </div>
-
-        <div class="weatherDayAfterTommorrowDIV">
-          <h2>Day After Tomorrow's Weather <span class="displayDate3"></span></h2>
-          <h2>
-            Temperature Average: <span class="DisplayTempAverageDay3"></span>
-          </h2>
-          <h3>
-            Temperature (Low):
-            <span class="displayTempLowDay3"></span>
-          </h3>
-          <h3>
-            Temperature (High):
-            <span class="displayTempHighDay3"></span>
-          </h3>
-
-          <h3>
-            Weather Condition: <span class="displayWeatherConditionDay3"></span>
-          </h3>
-          <h3>Humidity: <span class="displayHumidityDay3"></span></h3>
-          <h3>
-            Wind Speed (Maximum): <span class="displayWindSpeedDay3"></span>
-          </h3>
-          <h3>UV Index: <span class="displayUVDay3"></span></h3>
-          <h3>Sunrise: <span class="displaySunriseDay3"></span></h3>
-          <h3>Sunset: <span class="displaySunsetDay3"></span></h3>
-        </div>
-    </div>
       </div>
     </div>
 
@@ -136,10 +137,10 @@
         >Amal's Software Engineering Portfolio</a
       >
       <p>
-        This page serves as the entry point for our user-friendly weather app.
-        Built with JavaScript, HTML, CSS, Webpack, and a weather API, this app
-        empowers you to effortlessly retrieve weather information for various
-        locations.
+        This page serves as the entry point for this user-friendly weather app.
+        Built with JavaScript, HTML, CSS, Webpack, and
+        <a href="https://www.weatherapi.com/">Weather API</a>, this app empowers
+        you to effortlessly retrieve weather information for various locations.
       </p>
 
       <h2>Key Features:</h2>
@@ -151,8 +152,8 @@
 
         <li>
           Weather Data: The app displays essential weather details, including
-          temperature, weather description, and an icon, providing a clear
-          picture of the current weather.
+          temperature, weather description, providing a clear picture of the
+          current weather.
         </li>
         <li>
           Sleek Design: The HTML structure and CSS styles create a visually
@@ -164,8 +165,8 @@
       <h2>Getting Started:</h2>
       <ul>
         <li>
-          Explore the Weather: Type your desired location (city name or zip
-          code) in the search bar and click "Search."
+          Explore the Weather: Type your desired location (city name) in the
+          search bar and click "Search for Location"
         </li>
       </ul>
 

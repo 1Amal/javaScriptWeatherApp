@@ -1,16 +1,19 @@
 //This is the main JavaScript file
+// 2024, Amal Kariyawasam
 
-//ES Module Imports
 //Following will import the CSS file used to style the project
 import "./mainStyleSheet.css";
+
+//ES Module Imports
 import { processWeatherAPI } from "./queryAPI";
 import { displayController } from "./displayController";
 
-const weatherSearchButton = document.querySelector("#weatherSearchButton");
-const weatherSearchField = document.querySelector("#locationInput");
-
+//ES Module Exports
 export const newInstanceProcessWeatherAPI = new processWeatherAPI();
 export const newInstanceDisplayController = new displayController();
+
+const weatherSearchButton = document.querySelector("#weatherSearchButton");
+const weatherSearchField = document.querySelector("#locationInput");
 
 newInstanceDisplayController.receiveUserInput();
 

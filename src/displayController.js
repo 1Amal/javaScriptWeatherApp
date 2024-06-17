@@ -1,4 +1,5 @@
 // This module will receive user inputs and update the Display based on received API data
+// 2024, Amal Kariyawasam
 
 export class displayController {
   constructor() {}
@@ -32,9 +33,7 @@ export class displayController {
     const displayUVDay1 = document.querySelector(".displayUVDay1");
     const displaySunriseDay1 = document.querySelector(".displaySunriseDay1");
     const displaySunsetDay1 = document.querySelector(".displaySunsetDay1");
-    const displayWeatherAlertsDay1 = document.querySelector(
-      ".displayWeatherAlertsDay1"
-    );
+
     const displayLastUpdateDay1 = document.querySelector(
       ".displayLastUpdateDay1"
     );
@@ -77,8 +76,6 @@ export class displayController {
     const displaySunriseDay3 = document.querySelector(".displaySunriseDay3");
     const displaySunsetDay3 = document.querySelector(".displaySunsetDay3");
 
- 
-
     //Following code will update the above selected HTML selectors with relevant data for Day 1;
     displayLocation.innerText = weatherData.locationdDetails.location;
     displayRegion.innerText = weatherData.locationdDetails.region;
@@ -96,10 +93,9 @@ export class displayController {
     displayUVDay1.innerText = weatherData.weatherNow.uv;
     displaySunriseDay1.innerText = weatherData.weatherNow.sunrise;
     displaySunsetDay1.innerText = weatherData.weatherNow.sunset;
-    // displayWeatherAlertsDay1.innerText = weatherData.weatherNow.weatherAlerts;
     displayLastUpdateDay1.innerText = weatherData.weatherNow.weatherLastUpdated;
 
-    //Following code will update the above selected HTML selectors with relevant data for Day 2;
+    //Following code will update the above selected HTML sele>ctors with relevant data for Day 2;
     displayDate2.innerText = weatherData.weatherTommorrow.currentDate;
     DisplayTempAverageDay2.innerText =
       weatherData.weatherTommorrow.temperatureCAverage + "°";
@@ -136,12 +132,10 @@ export class displayController {
     displaySunsetDay3.innerText = weatherData.weatherDayAfterTommorrow.sunset;
   }
 
-  apiStatus(apiMessage)  //Code to display API Status
-
-  {
+  apiStatus(
+    apiMessage //Code to display API Status
+  ) {
     const apiStatus = document.querySelector(".apiStatus");
     apiStatus.innerText = apiMessage;
-
   }
-
 }

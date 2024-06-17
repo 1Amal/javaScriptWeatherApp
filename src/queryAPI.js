@@ -1,4 +1,5 @@
 // This module will handle all WeatherAPI.com API authentication, query and processing of the received data before passing onto the displayController module
+// 2024, Amal Kariyawasam
 
 import { newInstanceDisplayController } from "./mainJavaScript";
 
@@ -8,27 +9,23 @@ export class processWeatherAPI {
   }
 
   async sendAPIQuery(location) {
+    try {
+      console.log("Send a API query Module Loaded");
+      const sendQueryURL = `https://api.weatherapi.com/v1/forecast.json?key=${this.apiKey}&q=${location}&days=3&aqi=yes&alerts=yes`;
 
-    try{
-        console.log("Send a API query Module Loaded");
-    const sendQueryURL = `https://api.weatherapi.com/v1/forecast.json?key=${this.apiKey}&q=${location}&days=3&aqi=yes&alerts=yes`;
+      let fetchWeather = await fetch(sendQueryURL, { mode: "cors" });
+      const weatherDataJSON = await fetchWeather.json();
 
-    let fetchWeather = await fetch(sendQueryURL, { mode: "cors" });
-    const weatherDataJSON = await fetchWeather.json();
-
-    return this.forwardDataToDisplayController(weatherDataJSON);
+      return this.forwardDataToDisplayController(weatherDataJSON);
+    } catch (error) {
+      return newInstanceDisplayController.apiStatus(
+        "Error Occurred with the location entered, Please try again, Error Code: " +
+          error
+      );
     }
-
-    catch(error){
-        // console.log(error);
-        return newInstanceDisplayController.apiStatus("Error Occurred with the location entered, Please try again, Error Code: " + error);
-    }
-
-
   }
 
   forwardDataToDisplayController(returnedAPIQuery) {
-    // console.log(returnedAPIQuery);
     const displayData = {
       locationdDetails: {
         location: returnedAPIQuery.location.name,
@@ -48,9 +45,6 @@ export class processWeatherAPI {
         uv: returnedAPIQuery.current.uv,
         weatherAlerts: returnedAPIQuery.alerts.alert,
         weatherLastUpdated: returnedAPIQuery.current.last_updated,
-        // hourlyWeather:{returnedAPIQuery.forecast.forecastday[0].hour[0].time
-
-        // }
       },
       weatherTommorrow: {
         currentDate: returnedAPIQuery.forecast.forecastday[1].date,
@@ -89,8 +83,9 @@ export class processWeatherAPI {
         sunset: returnedAPIQuery.forecast.forecastday[2].astro.sunset,
       },
     };
-    // console.log(displayData);
-    newInstanceDisplayController.apiStatus("WeatherAPI returned Valid Response");
+    newInstanceDisplayController.apiStatus(
+      "WeatherAPI returned Valid Response"
+    );
 
     return newInstanceDisplayController.updateDisplay(displayData);
   }
