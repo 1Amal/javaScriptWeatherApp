@@ -10,7 +10,7 @@ export class displayController {
   updateDisplay(weatherData) {
     console.log(weatherData);
 
-    const apiStatus=document.querySelector(".apiStatus");
+    const apiStatus = document.querySelector(".apiStatus");
     // Following code will select the relevant HTML Selectors for Day 1
     const displayLocation = document.querySelector(".displayLocation");
     const displayRegion = document.querySelector(".displayRegion");
@@ -78,8 +78,8 @@ export class displayController {
     const displaySunriseDay3 = document.querySelector(".displaySunriseDay3");
     const displaySunsetDay3 = document.querySelector(".displaySunsetDay3");
 
-//Code to display API Status
-apiStatus.innerText="Display API Status Here";
+    //Code to display API Status
+    apiStatus.innerText = "Display API Status Here";
 
     //Following code will update the above selected HTML selectors with relevant data for Day 1;
     displayLocation.innerText = weatherData.locationdDetails.location;

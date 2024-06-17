@@ -18,3 +18,5 @@ weatherSearchButton.addEventListener("click", () => {
   newInstanceProcessWeatherAPI.sendAPIQuery(weatherSearchField.value);
   console.log(weatherSearchField.value);
 });
+
+newInstanceProcessWeatherAPI.sendAPIQuery("Melbourne,Au");
