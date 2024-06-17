@@ -1,5 +1,13 @@
 /* This is the main CSS File */
 
 h1 {
+  color: #20049e;
+}
+
+h2 {
   color: #b32626;
+}
+
+h3 {
+  color: #cf4109;
 }

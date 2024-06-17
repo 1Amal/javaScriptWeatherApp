@@ -11,7 +11,13 @@
         <form action="" method="get" id="bookSubmitForm">
           <div>
             <label for="locationInput">Please Enter Location</label>
-            <input id="locationInput" type="text" name="locationInput" value="Melbourne, AU"required/>
+            <input
+              id="locationInput"
+              type="text"
+              name="locationInput"
+              value="Melbourne, AU"
+              required
+            />
           </div>
           <div>
             <button type="button" id="weatherSearchButton">
@@ -22,17 +28,47 @@
       </div>
 
       <div class="displayWeatherData">
+        <div class="locationDetails">
+          <h1>
+            Weather Today in <span class="displayLocation"></span>
+            <span>=></span>
+            <span class="displayRegion"></span>
+            <span>=></span>
+            <span class="displayCountry"></span>
+          </h1>
+        </div>
         <div class="weatherToday">
-            <h2>Weather Today</h2>
-            <p class="todayTemp"></p>
+          <h2>Now / Today: <span class="displayDate1"></span></h2>
+
+          <h2>Temperature: <span class="DisplayTempDay1"></span></h2>
+          <h3>
+            Temperature (Feels Like):
+            <span class="displayTempFeelsLikeDay1"></span>
+          </h3>
+          <h3>
+            Weather Condition: <span class="displayWeatherConditionDay1"></span>
+          </h3>
+          <h3>Humidity: <span class="displayHumidityDay1"></span></h3>
+          <h3>Wind Speed: <span class="displayWindSpeedDay1"></span></h3>
+          <h3>Pressure: <span class="displayPressureDay1"></span></h3>
+          <h3>UV Index: <span class="displayUVDay1"></span></h3>
+          <h3>Sunrise: <span class="displaySunriseDay1"></span></h3>
+          <h3>Sunset: <span class="displaySunsetDay1"></span></h3>
+          <h3>Local Time is: <span class="displayLocalTime"></span></h3>
+          <h3>
+            Weather Last Updated On: <span class="displayLastUpdateDay1"></span>
+          </h3>
+          <h3>
+            Weather Alerts: <span class="displayWeatherAlertsDay1"></span>
+          </h3>
         </div>
 
         <div class="weatherTommorrow">
-
+          <h2>Tomorrow: <span class="displayDate2"></span></h2>
         </div>
 
         <div class="weatherDayAfterTommorrow">
-
+          <h2>Day After Tomorrow: <span class="displayDate3"></span></h2>
         </div>
       </div>
     </div>

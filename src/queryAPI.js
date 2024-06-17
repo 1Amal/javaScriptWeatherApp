@@ -1,6 +1,6 @@
 // This module will handle all WeatherAPI.com API authentication, query and processing of the received data before passing onto the displayController module
 
-import {newInstanceDisplayController} from "./mainJavaScript";
+import { newInstanceDisplayController } from "./mainJavaScript";
 
 export class processWeatherAPI {
   constructor() {
@@ -21,7 +21,7 @@ export class processWeatherAPI {
     console.log(returnedAPIQuery);
     const displayData = {
       locationdDetails: {
-        Location: returnedAPIQuery.location.name,
+        location: returnedAPIQuery.location.name,
         region: returnedAPIQuery.location.region,
         country: returnedAPIQuery.location.country,
         localTime: returnedAPIQuery.location.localtime,
@@ -58,7 +58,7 @@ export class processWeatherAPI {
         uv: returnedAPIQuery.forecast.forecastday[1].day.uv,
         condition: returnedAPIQuery.forecast.forecastday[1].day.condition.text,
         sunrise: returnedAPIQuery.forecast.forecastday[1].astro.sunrise,
-        sunset: returnedAPIQuery.forecast.forecastday[1].astro.sunset
+        sunset: returnedAPIQuery.forecast.forecastday[1].astro.sunset,
       },
       weatherDayAfterTommorrow: {
         currentDate: returnedAPIQuery.forecast.forecastday[2].date,
@@ -76,7 +76,7 @@ export class processWeatherAPI {
         uv: returnedAPIQuery.forecast.forecastday[2].day.uv,
         condition: returnedAPIQuery.forecast.forecastday[2].day.condition.text,
         sunrise: returnedAPIQuery.forecast.forecastday[2].astro.sunrise,
-        sunset: returnedAPIQuery.forecast.forecastday[2].astro.sunset
+        sunset: returnedAPIQuery.forecast.forecastday[2].astro.sunset,
       },
     };
     // console.log(displayData);
