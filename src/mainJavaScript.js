@@ -16,6 +16,7 @@ newInstanceDisplayController.receiveUserInput();
 
 weatherSearchButton.addEventListener("click", () => {
   newInstanceProcessWeatherAPI.sendAPIQuery(weatherSearchField.value);
+  newInstanceDisplayController.apiStatus("Weather Location request Sent");
   console.log(weatherSearchField.value);
 });
 

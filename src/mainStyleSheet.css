@@ -38,8 +38,8 @@ span {
 
 .appContainerDIV {
   display: grid;
-  grid-template-rows: 1fr 2fr 4fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 4fr;
+  grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
   opacity: 0.8;
 }
 
@@ -76,6 +76,7 @@ span {
   border-width: 5px;
   border-style: solid;
   flex-grow: 1;
+  flex-shrink:1;
 }
 
 .weatherTommorrowDIV {
@@ -85,6 +86,7 @@ span {
   border-width: 5px;
   border-style: solid;
   flex-grow: 1;
+  flex-shrink:2;
 }
 
 .weatherDayAfterTommorrowDIV {
@@ -94,6 +96,7 @@ span {
   border-width: 5px;
   border-style: solid;
   flex-grow: 1;
+  flex-shrink:2;
 }
 
 .introduction {
