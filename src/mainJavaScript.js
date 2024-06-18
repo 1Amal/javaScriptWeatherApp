@@ -14,13 +14,22 @@ export const newInstanceDisplayController = new displayController();
 
 const weatherSearchButton = document.querySelector("#weatherSearchButton");
 const weatherSearchField = document.querySelector("#locationInput");
+const submitFormPreventDefault=document.querySelector("#locationSubmitForm");
 
 newInstanceDisplayController.receiveUserInput();
 
 weatherSearchButton.addEventListener("click", () => {
+
   newInstanceProcessWeatherAPI.sendAPIQuery(weatherSearchField.value);
   newInstanceDisplayController.apiStatus("Weather Location request Sent");
   console.log(weatherSearchField.value);
+});
+
+//This function will prevent the default form submission action and will submit form data internally
+submitFormPreventDefault.addEventListener("submit",function(event){
+  event.preventDefault();
+  newInstanceProcessWeatherAPI.sendAPIQuery(weatherSearchField.value);
+  newInstanceDisplayController.apiStatus("Weather Location request Sent");
 });
 
 newInstanceProcessWeatherAPI.sendAPIQuery("Melbourne,Au");
